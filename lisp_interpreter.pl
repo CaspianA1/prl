@@ -117,7 +117,6 @@ no_op.
 repl(Env) :-
 	write('☯ > '),
 	read_input(Expr),
-	(Expr = '(factorial 3)' -> debug; no_op),
 	tokenize(Expr, Tokens),
 	repl_actions(Env, Tokens),
 	parse(Expr, Tokens, AST),
